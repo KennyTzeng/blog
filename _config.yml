@@ -11,7 +11,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite-url       # Note: don't forget to modify the CNAME file to your url
+url: https://kennytseng.github.io/       # Note: don't forget to modify the CNAME file to your url
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -21,8 +21,8 @@ permalink_defaults:
 # Site settings
 SEOTitle: 子軒的部落格 | Kenny's blog
 email: kenny29282000@gmail.com
-description: ""
-keyword: ""
+description: "this is Kenny's blog"
+keyword: "Blog"
 header-img: img/header_img/home-bg.jpg
 signature: false #show signature
 signature-img: img/signature/signature_black.png 
