@@ -6,12 +6,13 @@ subtitle: 使用工具竄改HTTP Request
 header-img: "Demo.png"
 tags:
 - 資訊安全
+- Tamper
 categories:
 - 資訊安全
 ---
 
 # Tamper
-&emsp;&emsp;Tamper是一款Google Chrome的plugin，能夠讓你檢視或修改HTTP/HTTPS Request Header，Firefox也有類似的add-ons [Tamper Data](https://addons.mozilla.org/zh-tw/firefox/addon/tamper-data/)，目前還沒有使用過。
+&emsp;&emsp;Tamper是一款Google Chrome的plugin，能夠讓你檢視或修改HTTP Request Header，Firefox也有類似的add-ons [Tamper Data](https://addons.mozilla.org/zh-tw/firefox/addon/tamper-data/)，目前還沒有使用過。
 ![tamper_demo](tamper_screenshot_01.png)
 
 ## 連結
