@@ -3,11 +3,11 @@ title: "Hello World"
 catalog: true
 date: 2017-07-10 18:47:53
 subtitle: "我的部落格終於上架啦！"
-header-img: "Demo.png"
+header-img: "Post_header_img.png"
 tags:
-- Life
+- "Life"
 categories:
-- Life
+- "Life"
 ---
 
 # 緣由

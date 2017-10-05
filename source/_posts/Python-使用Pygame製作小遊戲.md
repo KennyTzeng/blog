@@ -3,18 +3,24 @@ title: '[Python]使用Pygame製作小遊戲'
 catalog: true
 date: 2017-07-30 18:09:12
 subtitle:
-header-img: "Demo.png"
+header-img: "Post_header_img.png"
 tags:
-- Python
-- Pygame
+- "Python"
+- "Pygame"
 categories:
-- Python
+- "Python"
 ---
+
+# [Python]使用Pygame製作小遊戲
 
 &emsp;&emsp;今天要介紹的是用`Pygame`實作的一款小遊戲，[Pygame](http://www.pygame.org/wiki/about)是Python中一個免費且開源的library，支援鍵盤滑鼠輸入、聲音、圖像、文字等，適合拿來製作多媒體應用程式如遊戲，在[Pygame-GettingStarted](http://www.pygame.org/wiki/GettingStarted)中有各作業系統的安裝方式。
 &emsp;&emsp;其實原本是想練習寫寫看Python的圖形視窗介面，Python有內建的模組`Tkinter`可使用，但功能較陽春因此適合作為較靜態的視窗應用程式，要做遊戲還是交給`Pygame`或其他模組吧！
 
-&emsp;&emsp;首先先把完整的程式碼貼上來，部分的解說會在下面一一說明，完整的專案檔案可以在我的[Github](https://github.com/KennyTzeng/pygame_ball)中檢視。
+&emsp;&emsp;它是一款類似彈珠台的遊戲，球會在空中快速前進、碰到牆會反彈，每隔一段時間球速便會提高，我們要做的是用滑鼠控制平台不讓球掉下去，時間越久分數越高分。
+
+&emsp;&emsp;首先先把完整的程式碼貼上來，部分的解說待有空時補充還請見諒，程式的流程大致上是用while不斷循環，每次先檢查是否有收到系統事件(包含自定義的事件，例如球速提高)，之後便根據球的方向與速度更新位置，更新後馬上檢查是否有撞到牆或平台要反彈、或是碰到底部要Game Over出現分數與提示字樣，最後刷新畫面。
+&emsp;&emsp;程式參考了[Github這篇](https://github.com/20021307/Pygame/tree/master/reaction_game)(感謝嗚嗚)，並且有用到相關字體檔與圖片檔，完整的專案檔案可以在[我的Github](https://github.com/KennyTzeng/pygame_ball)中檢視。
+
 ```python
 import sys
 import pygame

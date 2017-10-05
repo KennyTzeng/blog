@@ -3,12 +3,13 @@ title: Tamper使用介紹
 catalog: true
 date: 2017-07-23 18:37:55
 subtitle: 使用工具竄改HTTP Request
-header-img: "Demo.png"
+header-img: "Post_header_img.png"
 tags:
-- 資訊安全
-- Tamper
+- "資訊安全"
+- "Tamper"
+- "工具"
 categories:
-- 資訊安全
+- "資訊安全"
 ---
 
 # Tamper
