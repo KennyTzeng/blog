@@ -64,5 +64,21 @@ sudo apt-get update
 sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
 ```
 
+## pip2、pip3
+ubuntu安裝好後就有內建python2.7.12與python3.5.2了，但是沒有與之對應的pip，因此
+```
+sudo apt-get install python-pip
+sudo apt-get install python3-pip
+pip install --upgrade pip
+pip3 install --upgrade pip
+```
+
+## pwntools
+將pwntools裝在python2，有試過裝在python3中，但是在from pwn import * 時會出錯
+```
+pip2 install --upgrade pwntools
+```
+
 ## 未完待續
 未來有用到其他工具會更新在這裡
+最後更新時間：2017/10/09
