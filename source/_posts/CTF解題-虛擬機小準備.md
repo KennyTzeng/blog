@@ -74,9 +74,34 @@ pip3 install --upgrade pip
 ```
 
 ## pwntools
-將pwntools裝在python2，有試過裝在python3中，但是在from pwn import * 時會出錯
+將pwntools裝在python2，有試過裝在python3中，但是在from pwn import * 時會報錯
 ```
 pip2 install --upgrade pwntools
+```
+
+## 使用ssh連線至虛擬機
+為了要能夠在本機電腦上使用ssh(Windows的putty、Mac可以直接用terminal)連線至虛擬機操作，需要在虛擬機上安裝openssh-server與做一些設定
+
+首先安裝openssh-server
+```
+sudo apt-get install openssh-server
+```
+接著是一些網路與連接埠轉送的設定
+打開VirtualBox上的設定 -> 網路 -> 「僅限主機」網路，新增一網路，網路卡位址使用預設的192.168.56.1即可
+![](vb_setting_01.png)
+接著在虛擬機中的terminal輸入`ifconfig`，查看網路位址，這裡是10.0.2.15
+![](vm_setting_01.png)
+然後去虛擬機的設定值 -> 網路 -> 介面卡，選擇附加到:NAT，並且在連接埠轉送中新增一條規則如圖所示，192.168.56.1:10022轉送至10.0.2.15:22
+![](vm_setting_02.png)
+最後重開虛擬機，以ssh連線至192.168.56.1:10022即可
+
+Mac的指令是
+```
+ssh 使用者名稱@192.168.56.1 -p 10022
+```
+若設定好了仍無法連線，有可能是虛擬機上沒有key，因此在虛擬機terminal上下指令產生一把
+```
+ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
 ```
 
 ## 未完待續
